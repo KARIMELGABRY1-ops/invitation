@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#d9ccb8">
+<title>دعوة زفاف كريم و جنى</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;500;700&family=Special+Elite&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#e9e0d1;--kraft:#cbb28d;--ink:#2f2924;--brown:#7a6347;--rose:#b98b85;
+--noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .18 0 0 0 .2 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+--grid:linear-gradient(#8a7a6044 1px,transparent 1px),linear-gradient(90deg,#8a7a6044 1px,transparent 1px)}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+body{background:var(--noise),linear-gradient(100deg,#d4c6b0,#e2d6c3 30%,#d2c3ab 55%,#e0d4c0 80%,#d3c4ac);color:var(--ink);font-family:Cairo,sans-serif;overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom)}
+body.lock{overflow:hidden;height:100vh}
+.script{font-family:"Mrs Saint Delafield",cursive;direction:ltr}
+.type{font-family:"Special Elite",Cairo,monospace}
+.ar{font-family:"Aref Ruqaa",serif}
+/* paper pieces */
+.sheet{filter:drop-shadow(0 7px 9px rgba(70,48,24,.28));position:relative;margin:0 auto}
+.paper{background:var(--noise),var(--paper);padding:38px 26px;position:relative}
+.kraft{background:var(--noise),var(--kraft)}
+.tape{position:absolute;width:92px;height:30px;background:var(--grid),#d8cbb4cc;background-size:8px 8px,8px 8px,auto;z-index:3;box-shadow:0 1px 2px #0002}
+.tape.plain{background:#d9ccb2d9}
+.clip{position:absolute;width:20px;height:54px;z-index:3;top:-14px}
+.pol{background:#f4eee2;padding:11px 11px 44px;box-shadow:0 8px 14px #4a301a40;position:relative}
+.pol .im{aspect-ratio:4/5;background:var(--noise),#d6c3a2;overflow:hidden;display:grid;place-items:center;color:#8a7352;font:15px Cairo}
+.pol .im img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.12) contrast(.97)}
+.pol::after{content:"♡";position:absolute;bottom:10px;right:50%;transform:translateX(50%);color:var(--brown);font-size:20px;opacity:.7}
+/* door */
+#door{position:fixed;inset:0;z-index:60;perspective:1500px;background:radial-gradient(circle,#fbf4e6 0,#e4d5ba 45%,#b9a37f 100%);overflow:hidden;transition:opacity 1s .9s,visibility 0s 1.9s}
+#door.open{opacity:0;visibility:hidden}
+.leaf{position:absolute;top:0;bottom:0;width:50%;background:var(--noise),linear-gradient(90deg,#0003,transparent 10%,transparent 90%,#0003),#c5ab84;transition:transform 2.2s cubic-bezier(.65,0,.25,1);backface-visibility:hidden}
+.leaf.l{left:0;transform-origin:left}.leaf.r{right:0;transform-origin:right}
+.open .l{transform:rotateY(-112deg)}.open .r{transform:rotateY(112deg)}
+.panel{position:absolute;inset:11% 9% 21%;border:2px dashed #7a634788;border-radius:130px 130px 8px 8px;background:var(--noise),#d6c3a0;box-shadow:inset 0 0 26px #6b4f2a55}
+.knob{position:absolute;top:53%;width:30px;height:30px;border-radius:50%;border:4px solid #8a7050;background:#efe5d2;box-shadow:0 3px 6px #0005}
+.l .knob{right:9px}.r .knob{left:9px}
+#mono{position:absolute;inset:0;z-index:3;display:grid;place-items:center;pointer-events:none;transition:opacity .6s}
+.open #mono{opacity:0}
+#mono .mono{width:min(72vw,330px);transform:translateY(-8%)}
+#tap{position:absolute;z-index:4;bottom:8%;left:50%;transform:translateX(-50%) rotate(-2deg);padding:15px 30px 15px 36px;background:var(--noise),#d2ba93;color:var(--ink);border:0;font:700 17px Cairo;cursor:pointer;clip-path:polygon(0 50%,14px 0,100% 0,100% 100%,14px 100%);filter:drop-shadow(0 4px 5px #0004);animation:bob 2.4s ease-in-out infinite;transition:opacity .4s}
+@keyframes bob{50%{transform:translateX(-50%) rotate(1deg) translateY(-6px)}}
+.open #tap{opacity:0}
+/* monogram */
+.mono svg{width:100%;height:auto;overflow:visible;display:block}
+.mono .d{stroke-dasharray:560;stroke-dashoffset:560;animation:draw 2.6s .3s ease forwards}
+.mono .d2{animation-delay:.9s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.mono text{opacity:0;animation:fade 1.4s 1.4s forwards}
+.mono .tj{animation-delay:1.9s}
+@keyframes fade{to{opacity:1}}
+/* page */
+main{position:relative;z-index:2;max-width:520px;margin:0 auto;padding:30px 16px 0;display:flex;flex-direction:column;gap:46px}
+#hero .paper{text-align:center;padding-top:46px}
+#hero .mono{width:min(68vw,260px);margin:0 auto 4px}
+.strip{display:inline-block;margin:6px 0 4px;padding:8px 22px;background:var(--noise),#d6c4a4;font:400 17px "Special Elite",Cairo;letter-spacing:.05em;transform:rotate(-1.2deg)}
+.lead{font-size:17px;opacity:.85;margin-bottom:6px}
+.names{font:700 clamp(44px,13vw,64px)/1.3 "Aref Ruqaa";margin:6px 0 2px}
+.names .amp{font:400 .85em "Mrs Saint Delafield";color:var(--rose);margin:0 .12em}
+.time{margin-top:6px;font:400 15px "Special Elite",Cairo;opacity:.8}
+.note{max-width:420px;margin:0 auto}
+.note .paper{padding:38px 28px;text-align:center}
+.dua{font:400 clamp(25px,7vw,34px)/1.9 "Aref Ruqaa"}
+.heart-s{display:block;margin:12px auto 0;width:22px;color:var(--brown)}
+h2{font:700 clamp(30px,8vw,40px) "Aref Ruqaa";text-align:center;margin-bottom:16px}
+#cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+#cd div{background:var(--grid),#f1e9da;background-size:10px 10px;border:1px solid #8a7a6055;padding:14px 2px 10px;text-align:center}
+#cd b{font:400 clamp(28px,9vw,40px)/1 "Special Elite";display:block;font-variant-numeric:tabular-nums}
+#cd span{font-size:13px;opacity:.8}
+.venue{text-align:center}
+.venue .pol{max-width:380px;margin:0 auto;transform:rotate(-1.5deg)}
+.venue iframe{width:100%;height:100%;border:0;filter:sepia(.45) saturate(.8)}
+.venue .im{aspect-ratio:1/1.05}
+.vtag{margin:-26px auto 0;position:relative;z-index:4;width:min(78%,300px);transform:rotate(2deg)}
+.vtag .paper{padding:22px 18px 16px;text-align:center}
+.vtag h3{font:700 22px "Aref Ruqaa"}
+.vtag p{font-size:14px;opacity:.85;margin-top:2px}
+.btns{display:flex;gap:10px;justify-content:center;margin-top:16px}
+.btn{padding:12px 16px;background:var(--noise),#d2ba93;color:var(--ink);text-decoration:none;font:700 14px Cairo;border:1px dashed #7a634799;outline:2px solid #d2ba93;outline-offset:2px}
+.btn.f{background:var(--noise),#8f7653;color:#f6efe2;outline-color:#8f7653}
+/* deck */
+.deck{position:relative;width:min(72vw,300px);margin:0 auto;aspect-ratio:4/5.55;touch-action:pan-y;cursor:pointer}
+.deck .pol{position:absolute;inset:0;transition:transform .6s cubic-bezier(.3,.9,.3,1),opacity .5s}
+.hint{text-align:center;margin-top:18px;font:400 14px "Special Elite",Cairo;opacity:.7}
+.hall{display:grid;grid-template-columns:1fr 1fr;gap:26px 16px;padding:0 4px}
+.hall .pol{padding:7px 7px 30px}
+.hall .pol:nth-child(odd){transform:rotate(-2.5deg)}.hall .pol:nth-child(even){transform:rotate(2deg) translateY(18px)}
+.hall .pol::after{font-size:15px;bottom:6px}
+.rsvp .paper{padding:40px 24px 30px;text-align:center}
+.rsvp p.t{font-size:16px;line-height:1.9;margin-bottom:16px}
+.rsvp input,.rsvp select,.rsvp textarea{width:100%;padding:12px 10px;margin-bottom:10px;background:transparent;border:0;border-bottom:1.5px dashed #7a6347;font:16px Cairo;color:var(--ink);text-align:right;outline:0;border-radius:0}
+.rsvp textarea{height:64px;resize:none}
+.rsvp input:focus,.rsvp textarea:focus,.rsvp select:focus{border-bottom-style:solid;background:#fff3;}
+.go{margin-top:10px;width:100%;padding:16px;border:0;background:var(--noise),#8f7653;color:#fbf5e8;font:700 19px Cairo;cursor:pointer;clip-path:polygon(0 8%,4% 0,96% 3%,100% 0,100% 94%,96% 100%,3% 97%,0 100%);transition:transform .2s}
+.go:active{transform:scale(.97)}
+#rmsg{margin-top:12px;font-size:14px;min-height:20px;color:var(--brown)}
+.thanks{font:700 28px/1.7 "Aref Ruqaa"}
+footer{text-align:center;padding:8px 20px calc(70px + env(safe-area-inset-bottom))}
+.tel{display:inline-flex;align-items:center;gap:12px;padding:18px 34px 18px 40px;background:var(--noise),#d2ba93;color:var(--ink);text-decoration:none;font:400 21px "Special Elite";direction:ltr;clip-path:polygon(0 50%,16px 0,100% 0,100% 100%,16px 100%);filter:drop-shadow(0 4px 5px #0004)}
+footer small{display:block;margin-top:34px;font:34px "Mrs Saint Delafield";color:var(--brown)}
+#heart{color:var(--rose);cursor:default;font:18px Cairo}
+/* floating things */
+#fx{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.fx{position:absolute;top:0;opacity:.7;animation:fall linear infinite}
+.fx svg{width:100%;height:auto;display:block;animation:sway 5s ease-in-out infinite alternate}
+@keyframes fall{from{transform:translate3d(0,-14vh,0) rotate(var(--a))}to{transform:translate3d(var(--dx),114vh,0) rotate(var(--b))}}
+@keyframes sway{to{transform:rotate(18deg)}}
+body.lock .fx{animation-play-state:paused}
+/* ring */
+#ring{position:fixed;z-index:10;top:0;left:0;width:50px;height:50px;pointer-events:none;opacity:0;transition:opacity 1s;will-change:transform;filter:drop-shadow(0 5px 6px #0007)}
+#ring.on{opacity:.95}
+/* admin */
+#adm{position:fixed;inset:0;z-index:100;background:#000c;display:none;overflow:auto;padding:20px}
+#adm.on{display:block}
+#adm form{max-width:520px;margin:auto;background:#f1e9da;border-radius:6px;padding:20px}
+#adm h4{margin:16px 0 2px;color:var(--brown)}
+#adm label{display:block;font-size:13px;margin:10px 0 3px}
+#adm input,#adm textarea{width:100%;padding:10px;border:1px solid #8a7a60;background:#fff;font:15px Cairo;direction:ltr;text-align:left}
+#adm textarea{height:78px}
+#adm .row{display:flex;gap:8px;margin-top:16px}
+#adm button{flex:1;padding:12px;border:0;background:#8f7653;color:#fff;font:700 15px Cairo}
+#adm button.g{background:#5f5242}
+#msg{margin-top:10px;font-size:13px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.mono .d{stroke-dashoffset:0}.mono text{opacity:1}}
+</style>
+</head>
+<body class="lock">
+<audio id="song" src="song.mp3" loop preload="auto"></audio>
+<div id="fx"></div>
+
+<div id="door">
+  <div class="leaf l"><div class="panel"></div><div class="knob"></div></div>
+  <div class="leaf r"><div class="panel"></div><div class="knob"></div></div>
+  <div id="mono"><div class="mono"></div></div>
+  <button id="tap">اضغط لفتح الباب</button>
+</div>
+
+<svg id="ring" viewBox="0 0 60 60"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9c7a3c"/><stop offset=".5" stop-color="#f1dfae"/><stop offset="1" stop-color="#a8864a"/></linearGradient></defs><ellipse cx="30" cy="37" rx="17" ry="16" fill="none" stroke="url(#g)" stroke-width="5"/><path d="M23 13l7-8 7 8-7 8z" fill="#f4f8fb" stroke="#a9c4d4" stroke-width="1.2"/></svg>
+
+<main>
+  <div class="sheet" id="hero">
+    <div class="tape" style="top:-12px;right:30px;transform:rotate(-6deg)"></div>
+    <div class="paper torn">
+      <div class="mono"></div>
+      <p class="lead">بكل حب يسعدنا دعوتكم لحضور زفاف</p>
+      <h1 class="names"><span id="gn">كريم</span><span class="amp">&amp;</span><span id="bn">جنى</span></h1>
+      <div class="strip" id="strip"></div>
+      <p class="time" id="tm"></p>
+    </div>
+  </div>
+
+  <div class="sheet note" style="transform:rotate(-1.4deg)">
+    <svg class="clip" style="right:30px" viewBox="0 0 20 54" fill="none" stroke="#9a8260" stroke-width="2"><path d="M6 44V10a4 4 0 018 0v32a7 7 0 01-14 0V12"/></svg>
+    <div class="paper kraft torn">
+      <p class="dua">بارك الله لهما، وبارك عليهما، وجمع بينهما في خير</p>
+      <svg class="heart-s" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21C5 15 2 11 2 7.5A5 5 0 0 1 12 6a5 5 0 0 1 10 1.5C22 11 19 15 12 21z"/></svg>
+    </div>
+  </div>
+
+  <div class="sheet" style="transform:rotate(1deg);width:100%">
+    <div class="tape plain" style="top:-12px;left:24px;transform:rotate(5deg)"></div>
+    <div class="paper torn">
+      <h2>باقي على الفرح</h2>
+      <div id="cd"><div><b id="cD">0</b><span>يوم</span></div><div><b id="cH">0</b><span>ساعة</span></div><div><b id="cM">0</b><span>دقيقة</span></div><div><b id="cS">0</b><span>ثانية</span></div></div>
+    </div>
+  </div>
+
+  <div class="venue">
+    <h2>مكان الحفل</h2>
+    <div class="pol">
+      <div class="tape" style="top:-14px;left:50%;margin-left:-46px;transform:rotate(-3deg)"></div>
+      <div class="im"><iframe id="mapf" loading="lazy" title="الموقع"></iframe></div>
+    </div>
+    <div class="sheet vtag"><div class="paper kraft torn"><h3 id="vn"></h3><p id="va"></p></div></div>
+    <div class="btns"><a class="btn f" id="gm" target="_blank" rel="noopener">Google Maps</a><a class="btn" id="am" target="_blank" rel="noopener">Apple Maps</a></div>
+  </div>
+
+  <div>
+    <h2>حكايتنا</h2>
+    <div class="deck" id="deck"></div>
+    <p class="hint">اضغط على الصورة أو اسحبها</p>
+  </div>
+
+  <div>
+    <h2>القاعة</h2>
+    <div class="hall" id="hall"></div>
+  </div>
+
+  <div class="sheet rsvp" style="transform:rotate(-.8deg)">
+    <div class="tape" style="top:-12px;right:40%;transform:rotate(4deg)"></div>
+    <div class="paper torn" id="rbox">
+      <h2>احجز مكانك</h2>
+      <p class="t">عرّفنا إنك جاي علشان نعمل حسابك في الجاتوه 🍰</p>
+      <form id="rsvp">
+        <input name="name" placeholder="اسمك" required autocomplete="name">
+        <input name="phone" type="tel" placeholder="رقم موبايلك" autocomplete="tel">
+        <select name="guests"><option value="1">أنا لوحدي</option><option value="2">إحنا اتنين</option><option value="3">٣ أفراد</option><option value="4">٤ أفراد</option><option value="5">٥ أفراد</option><option value="6">٦ أفراد</option></select>
+        <textarea name="note" placeholder="كلمة حلوة لنا (اختياري)"></textarea>
+        <input name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <button class="go" type="submit">أحجز مكاني ♥</button>
+        <p id="rmsg"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <a class="tel" id="tel"><span>☎</span><span id="telt"></span></a>
+    <small class="script">Karim <span id="heart">♥</span> Jana</small>
+  </footer>
+</main>
+
+<div id="adm"><form id="af">
+  <h3>لوحة التعديل</h3>
+  <label>التاريخ والوقت</label><input name="date" type="datetime-local">
+  <label>اسم القاعة</label><input name="venue" dir="rtl">
+  <label>العنوان</label><input name="address" dir="rtl">
+  <label>لينك الموقع (Google/Apple Maps)</label><input name="mapUrl">
+  <label>رقم الاتصال</label><input name="phone">
+  <label>صور الحكاية (سطر لكل صورة)</label><textarea name="photos"></textarea>
+  <label>صور القاعة (سطر لكل صورة)</label><textarea name="hall"></textarea>
+  <h4>استلام الحجوزات</h4>
+  <label>إيميل Gmail</label><input name="notifyEmail">
+  <label>واتساب (اختياري) — رقمك بالكود: 2010...</label><input name="waPhone">
+  <label>واتساب API key من CallMeBot</label><input name="waKey">
+  <h4>ربط GitHub (مرة واحدة)</h4>
+  <label>اسم الحساب</label><input name="owner">
+  <label>اسم الـ repo</label><input name="repo">
+  <label>الفرع</label><input name="branch" value="main">
+  <label>Token (Contents: write)</label><input name="token" type="password">
+  <div class="row"><button type="button" id="save">حفظ للجميع</button><button type="button" class="g" id="dl">تحميل config</button><button type="button" class="g" id="cl">إغلاق</button></div>
+  <p id="msg"></p>
+</form></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const D={groom:"كريم",bride:"جنى",date:"2028-08-08T21:00",venue:"القاعة — سيتم تحديدها قريباً",address:"العنوان سيُضاف قريباً",mapUrl:"",phone:"",photos:[],hall:[],notifyEmail:"",waPhone:"",waKey:""};
+let C={...D};
+const AR=["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+const n=x=>String(x).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+const song=$("#song");
+
+/* K + J typographic heart */
+const MONO=`<svg viewBox="0 0 200 190" fill="none"><g stroke="#2f2924" stroke-linecap="round"><path class="d" stroke-width="2.4" d="M100 176C36 128 12 90 18 58 24 28 62 18 84 40c8 8 13 15 16 24 3-9 8-16 16-24 22-22 60-12 66 18 6 32-18 70-82 118z"/><path class="d d2" stroke-width=".9" transform="translate(3 3) rotate(-1.2 100 100)" d="M100 176C36 128 12 90 18 58 24 28 62 18 84 40c8 8 13 15 16 24 3-9 8-16 16-24 22-22 60-12 66 18 6 32-18 70-82 118z"/></g><g class="script" fill="#2f2924" style="mix-blend-mode:multiply"><text x="76" y="118" font-size="118" text-anchor="middle" transform="rotate(-4 76 100)">K</text><text class="tj" x="122" y="128" font-size="118" text-anchor="middle" transform="rotate(3 122 100)" fill="#7a6347">J</text></g><g stroke="#2f2924" stroke-width="1.1"><path d="M178 14l2 7 7 2-7 2-2 7-2-7-7-2 7-2z"/><path d="M14 150l1.5 5 5 1.5-5 1.5-1.5 5-1.5-5-5-1.5 5-1.5z"/></g></svg>`;
+$$(".mono").forEach(e=>e.innerHTML=MONO);
+
+/* torn edges */
+function torn(){
+  $$(".torn").forEach(el=>{
+    const w=el.offsetWidth,h=el.offsetHeight;if(!w)return;
+    const j=()=>(Math.random()*6).toFixed(1),nx=Math.round(w/8),ny=Math.round(h/8),p=[];
+    for(let i=0;i<=nx;i++)p.push(`${(i/nx*100).toFixed(1)}% ${j()}px`);
+    for(let i=1;i<=ny;i++)p.push(`calc(100% - ${j()}px) ${(i/ny*100).toFixed(1)}%`);
+    for(let i=nx-1;i>=0;i--)p.push(`${(i/nx*100).toFixed(1)}% calc(100% - ${j()}px)`);
+    for(let i=ny-1;i>0;i--)p.push(`${j()}px ${(i/ny*100).toFixed(1)}%`);
+    el.style.clipPath=`polygon(${p.join(",")})`;
+  });
+}
+let lw=innerWidth;addEventListener("resize",()=>{if(innerWidth!==lw){lw=innerWidth;torn()}});
+
+fetch("config.json?"+Date.now()).then(r=>r.json()).catch(()=>({})).then(c=>{C={...D,...c};render()});
+
+function img(s){return s?`<img src="${s}" loading="lazy" alt="">`:"ضع صورتك هنا"}
+function render(){
+  const d=new Date(C.date);
+  $("#gn").textContent=C.groom;$("#bn").textContent=C.bride;
+  $("#strip").textContent=n(d.getDate())+" · "+AR[d.getMonth()]+" · "+n(d.getFullYear());
+  let h=d.getHours(),m=d.getMinutes();const p=h>=12?"مساءً":"صباحاً";h=h%12||12;
+  $("#tm").textContent="الساعة "+n(h)+(m?":"+n(String(m).padStart(2,"0")):"")+" "+p;
+  $("#vn").textContent=C.venue;$("#va").textContent=C.address;
+  const q=encodeURIComponent(C.venue+" "+C.address);
+  $("#mapf").src="https://maps.google.com/maps?q="+q+"&output=embed";
+  $("#gm").href=C.mapUrl||"https://www.google.com/maps/search/?api=1&query="+q;
+  $("#am").href="https://maps.apple.com/?q="+q;
+  $("#tel").href="tel:"+C.phone.replace(/\s/g,"");$("#telt").textContent=C.phone||"—";
+  const ps=C.photos.length?C.photos:[null,null,null,null,null];
+  $("#deck").innerHTML=ps.map(s=>`<div class="pol"><div class="im">${img(s)}</div></div>`).join("");
+  $("#hall").innerHTML=(C.hall.length?C.hall:[null,null,null,null]).map(s=>`<div class="pol"><div class="im" style="aspect-ratio:1">${img(s)}</div></div>`).join("");
+  order=[...$$("#deck .pol")];layDeck();
+  torn();
+  if(localStorage.getItem("rsvp"))thanks(localStorage.getItem("rsvp"));
+}
+
+/* countdown */
+setInterval(()=>{
+  const s=Math.max(0,Math.floor((new Date(C.date)-new Date())/1000));
+  $("#cD").textContent=n(Math.floor(s/86400));$("#cH").textContent=n(Math.floor(s%86400/3600));
+  $("#cM").textContent=n(Math.floor(s%3600/60));$("#cS").textContent=n(s%60);
+},1000);
+
+/* door */
+$("#tap").onclick=()=>{
+  song.play().catch(()=>{});
+  $("#door").classList.add("open");
+  setTimeout(()=>{document.body.classList.remove("lock");$("#ring").classList.add("on");torn()},1800);
+};
+
+/* photo deck */
+let order=[],busy=false;
+const pose=i=>`translateY(${i*7}px) rotate(${i?(i%2?1:-1)*(2+i*1.6):-1}deg) scale(${1-i*.035})`;
+function layDeck(){
+  order.forEach((e,i)=>{e.style.zIndex=order.length-i;e.style.transform=pose(i);e.style.opacity=i<4?1:0});
+}
+function next(dir=1){
+  if(busy||order.length<2)return;busy=true;
+  const t=order[0];t.style.transform=`translateX(${dir*130}%) rotate(${dir*26}deg)`;t.style.opacity=0;
+  order.slice(1).forEach((e,i)=>{e.style.transform=pose(i);e.style.opacity=i<4?1:0});
+  setTimeout(()=>{order.push(order.shift());t.style.transition="none";layDeck();void t.offsetWidth;t.style.transition="";busy=false},520);
+}
+let sx=0;const dk=$("#deck");
+dk.addEventListener("pointerdown",e=>sx=e.clientX);
+dk.addEventListener("pointerup",e=>{const dx=e.clientX-sx;next(Math.abs(dx)>30?Math.sign(dx):1)});
+
+/* gliding ring */
+let rx=0,ry=0,rr=0;
+(function loop(){
+  const H=document.documentElement.scrollHeight-innerHeight||1,p=scrollY/H;
+  const tx=innerWidth*(.5+Math.sin(p*Math.PI*5)*.38)-25,ty=innerHeight*.8+Math.sin(p*Math.PI*9)*18-25;
+  rx+=(tx-rx)*.06;ry+=(ty-ry)*.06;rr+=(p*720-rr)*.06;
+  $("#ring").style.transform=`translate(${rx}px,${ry}px) rotate(${rr}deg)`;
+  requestAnimationFrame(loop);
+})();
+
+/* falling dried flowers, hearts, sparkles */
+const SPR=`<svg viewBox="0 0 60 120"><g stroke="#a58b66" fill="none" stroke-width="1.3" stroke-linecap="round"><path d="M30 118C30 80 30 50 30 18"/><path d="M30 92C20 82 14 70 10 54"/><path d="M30 82C40 70 46 58 50 42"/><path d="M30 62C24 52 22 42 20 28"/><path d="M30 52C36 42 40 34 42 20"/></g><g fill="#efe2c8" stroke="#b49a72" stroke-width=".7"><circle cx="30" cy="15" r="4"/><circle cx="10" cy="51" r="4"/><circle cx="50" cy="39" r="4"/><circle cx="20" cy="25" r="3.6"/><circle cx="42" cy="17" r="3.6"/><circle cx="22" cy="35" r="3"/><circle cx="38" cy="30" r="3"/><circle cx="17" cy="62" r="3"/><circle cx="45" cy="55" r="3"/></g></svg>`;
+const HRT=`<svg viewBox="0 0 24 24" fill="none" stroke="#8a6f52" stroke-width="1.3"><path d="M12 21C5 15 2 11 2 7.5A5 5 0 0 1 12 6a5 5 0 0 1 10 1.5C22 11 19 15 12 21z"/></svg>`;
+const SPK=`<svg viewBox="0 0 24 24" fill="none" stroke="#8a6f52" stroke-width="1.2"><path d="M12 2l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/></svg>`;
+for(let i=0;i<16;i++){
+  const t=i%4?(i%3?SPR:HRT):SPK,w=t===SPR?26+Math.random()*22:12+Math.random()*10,e=document.createElement("div");
+  e.className="fx";e.innerHTML=t;
+  e.style.cssText=`left:${Math.random()*96}%;width:${w}px;animation-duration:${18+Math.random()*20}s;animation-delay:-${Math.random()*34}s;--dx:${(Math.random()*160-80)|0}px;--a:${(Math.random()*60-30)|0}deg;--b:${(Math.random()*200-100)|0}deg`;
+  $("#fx").appendChild(e);
+}
+
+/* RSVP */
+function thanks(name){
+  $("#rbox").innerHTML=`<p class="thanks">تم الحجز يا ${name} ♥<br><small style="font:400 17px Cairo">مستنيينك، والجاتوه محسوب باسمك 🍰</small></p>`;
+  torn();
+}
+$("#rsvp").onsubmit=async e=>{
+  e.preventDefault();const f=e.target,msg=$("#rmsg");
+  if(f._honey.value)return;
+  if(!C.notifyEmail&&!(C.waPhone&&C.waKey)){msg.textContent="الحجز لسه مش متفعّل، كلمنا على الرقم اللي تحت 💛";return}
+  const name=f.name.value.trim(),data={name,phone:f.phone.value.trim(),guests:f.guests.value,note:f.note.value.trim()};
+  msg.textContent="ثواني...";f.querySelector("button").disabled=true;
+  let ok=false;
+  if(C.notifyEmail){
+    try{const r=await fetch("https://formsubmit.co/ajax/"+encodeURIComponent(C.notifyEmail),{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({...data,_subject:`حجز جديد: ${name} (${data.guests})`,_template:"table",_captcha:"false"})});ok=r.ok}catch(_){}
+  }
+  if(C.waPhone&&C.waKey){
+    const t=`حجز جديد 🎉\nالاسم: ${name}\nالعدد: ${data.guests}\nالموبايل: ${data.phone||"-"}\n${data.note?"رسالة: "+data.note:""}`;
+    try{await fetch(`https://api.callmebot.com/whatsapp.php?phone=${encodeURIComponent(C.waPhone)}&text=${encodeURIComponent(t)}&apikey=${encodeURIComponent(C.waKey)}`,{mode:"no-cors"});ok=true}catch(_){}
+  }
+  if(ok){localStorage.setItem("rsvp",name);thanks(name)}
+  else{msg.textContent="حصلت مشكلة، جرب تاني أو كلمنا على الرقم 💛";f.querySelector("button").disabled=false}
+};
+
+/* secret admin: tap the heart in the footer 5 times */
+let taps=0,tt;
+$("#heart").onclick=()=>{taps++;clearTimeout(tt);tt=setTimeout(()=>taps=0,1500);if(taps>=5){taps=0;openAdm()}};
+const F=$("#af"),gh=JSON.parse(localStorage.getItem("gh")||"{}");
+function openAdm(){
+  ["date","venue","address","mapUrl","phone","notifyEmail","waPhone","waKey"].forEach(k=>F[k].value=C[k]||"");
+  F.photos.value=C.photos.join("\n");F.hall.value=C.hall.join("\n");
+  ["owner","repo","branch","token"].forEach(k=>{if(gh[k])F[k].value=gh[k]});
+  $("#adm").classList.add("on");
+}
+$("#cl").onclick=()=>$("#adm").classList.remove("on");
+const lines=v=>v.split("\n").map(x=>x.trim()).filter(Boolean);
+function collect(){const o={...C};["date","venue","address","mapUrl","phone","notifyEmail","waPhone","waKey"].forEach(k=>o[k]=F[k].value.trim());o.photos=lines(F.photos.value);o.hall=lines(F.hall.value);return o}
+$("#dl").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(collect(),null,2)],{type:"application/json"}));a.download="config.json";a.click()};
+$("#save").onclick=async()=>{
+  const msg=$("#msg"),g={owner:F.owner.value.trim(),repo:F.repo.value.trim(),branch:F.branch.value.trim()||"main",token:F.token.value.trim()};
+  if(!g.owner||!g.repo||!g.token){msg.textContent="املأ بيانات GitHub الأول";return}
+  localStorage.setItem("gh",JSON.stringify(g));
+  const url=`https://api.github.com/repos/${g.owner}/${g.repo}/contents/config.json`,H={Authorization:"Bearer "+g.token,Accept:"application/vnd.github+json"};
+  msg.textContent="جاري الحفظ...";
+  try{
+    const cur=await fetch(url+"?ref="+g.branch,{headers:H}),sha=cur.ok?(await cur.json()).sha:undefined;
+    const data=collect(),body=btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
+    const r=await fetch(url,{method:"PUT",headers:H,body:JSON.stringify({message:"update invitation",content:body,branch:g.branch,sha})});
+    if(!r.ok)throw new Error(r.status);
+    C={...D,...data};render();msg.textContent="تم الحفظ، التعديل هيظهر للجميع خلال دقيقة تقريباً";
+  }catch(e){msg.textContent="فشل الحفظ ("+e.message+"). راجع الـ Token أو استخدم تحميل config"}
+};
+</script>
+</body>
+</html>

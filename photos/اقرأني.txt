@@ -1,0 +1,2 @@
+حط صورك هنا، وبعدين اكتب مساراتها في config.json
+مثال: "photos": ["photos/1.jpg","photos/2.jpg"]
