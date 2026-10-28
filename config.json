@@ -1,0 +1,21 @@
+{
+  "groom": "كريم",
+  "bride": "جنى",
+  "groomEn": "Karim",
+  "brideEn": "Jana",
+  "date": "2027-07-27T21:00",
+  "venue": "قاعة فيينا",
+  "address": "",
+  "mapUrl": "https://maps.app.goo.gl/dR8N3XyfbCt534UJ7",
+  "lat": 29.9967977,
+  "lng": 31.2151914,
+  "groomPhone": "01055663606",
+  "groomImg": "photos/karim.webp",
+  "brideImg": "photos/jana.webp",
+  "hall": [
+    "photos/hall1.jpg",
+    "photos/hall2.jpg",
+    "photos/hall3.jpg",
+    "photos/hall4.jpg"
+  ]
+}
